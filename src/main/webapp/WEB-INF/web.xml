@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+    <servlet>
+        <description></description>
+        <display-name>LoginServlet</display-name>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>uni.iitu.servlet.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>LogoutServlet</display-name>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>uni.iitu.servlet.LogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>RegistrationServlet</display-name>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <servlet-class>uni.iitu.servlet.RegistrationServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <url-pattern>/RegistrationServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>TaskServlet</display-name>
+        <servlet-name>TaskServlet</servlet-name>
+        <servlet-class>uni.iitu.servlet.TaskServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TaskServlet</servlet-name>
+        <url-pattern>/TaskServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>SubjectServlet</display-name>
+        <servlet-name>SubjectServlet</servlet-name>
+        <servlet-class>uni.iitu.servlet.SubjectServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SubjectServlet</servlet-name>
+        <url-pattern>/SubjectServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>SpecificTaskServlet</display-name>
+        <servlet-name>SpecificTaskServlet</servlet-name>
+        <servlet-class>uni.iitu.servlet.SpecificTaskServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SpecificTaskServlet</servlet-name>
+        <url-pattern>/SpecificTaskServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>GroupListServlet</display-name>
+        <servlet-name>GroupListServlet</servlet-name>
+        <servlet-class>uni.iitu.servlet.GroupListServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GroupListServlet</servlet-name>
+        <url-pattern>/GroupListServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>GroupServlet</display-name>
+        <servlet-name>GroupServlet</servlet-name>
+        <servlet-class>uni.iitu.servlet.GroupServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GroupServlet</servlet-name>
+        <url-pattern>/GroupServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>EstimateTotalServlet</display-name>
+        <servlet-name>EstimateTotalServlet</servlet-name>
+        <servlet-class>uni.iitu.servlet.EstimateTotalServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EstimateTotalServlet</servlet-name>
+        <url-pattern>/EstimateTotalServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>EstimateTaskServlet</display-name>
+        <servlet-name>EstimateTaskServlet</servlet-name>
+        <servlet-class>uni.iitu.servlet.EstimateTaskServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EstimateTaskServlet</servlet-name>
+        <url-pattern>/EstimateTaskServlet</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>AuthenticationFilter</filter-name>
+        <filter-class>uni.iitu.filter.AuthenticationFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+</web-app>
