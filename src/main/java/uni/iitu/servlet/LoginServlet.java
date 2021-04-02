@@ -1,14 +1,10 @@
 package uni.iitu.servlet;
 
-import uni.iitu.dao.SubjectDao;
 import uni.iitu.dao.UserDao;
-import uni.iitu.entity.Subject;
-import uni.iitu.entity.Subject_user;
 import uni.iitu.entity.User;
 
 import java.io.*;
 import java.sql.SQLException;
-import java.util.List;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;

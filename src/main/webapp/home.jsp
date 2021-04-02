@@ -1,4 +1,4 @@
-<%--
+<%@ page import="uni.iitu.entity.User" %><%--
   Created by IntelliJ IDEA.
   User: Admin
   Date: 11.03.2021
@@ -9,11 +9,15 @@
 <html>
 <head>
     <title>Home</title>
-    <jsp:include page="header.jsp" />
+    <jsp:include page="header.jsp"/>
+
+        <%
+        User user = (User) session.getAttribute("user");
+        %>
 
     <div style="text-align: center">
-        <h1>Welcome to Adil's Web School</h1>
-        <b>${user.name} (${user.email})</b>
+        <h1>Welcome to Adil's Web School</h1>x
+        <b><%= user.getName() %> (<%= user.getEmail() %>)</b>
     </div>
-</body>
+    </body>
 </html>

@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Total Grade</title>
-    <jsp:include page="header.jsp" />
+    <%@include file="header.jsp" %>
 
     <div>
         <p><c:out value="${studentId}"/></p>

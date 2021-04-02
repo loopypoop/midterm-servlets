@@ -14,6 +14,7 @@
             </tr>
             <c:forEach var="group" items="${groupList}">
 
+
                 <tr>
                     <td><c:out value="${group.id}" /></td>
                     <td><a href="GroupServlet?groupId=${group.id}"><c:out value="${group.name}" /></a></td>

@@ -3,7 +3,7 @@
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
-    <jsp:include page="header.jsp" />
+    <%@include file="header.jsp" %>
 
     <div class="text-center">
         <form class="form-signin" action="login" method="post">
