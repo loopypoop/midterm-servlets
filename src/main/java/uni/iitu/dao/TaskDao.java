@@ -1,7 +1,6 @@
 package uni.iitu.dao;
 
 
-import uni.iitu.entity.Subject;
 import uni.iitu.entity.Task;
 import uni.iitu.entity.Task_user;
 
