@@ -16,7 +16,7 @@
         %>
 
     <div style="text-align: center">
-        <h1>Welcome to Adil's Web School</h1>x
+        <h1>Welcome to Adil's Online School</h1>x
         <b><%= user.getName() %> (<%= user.getEmail() %>)</b>
     </div>
     </body>

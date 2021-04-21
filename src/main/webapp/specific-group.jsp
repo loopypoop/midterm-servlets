@@ -19,12 +19,12 @@
                 <th>Name</th>
             </tr>
 <%--            <c:forEach var="student" items="${group}">--%>
-            <% for (User user: group) { %>
+            <% for (User student: group) { %>
 
                 <tr>
 <%--                    <td><c:out value="${student.id}" /></td>--%>
                     <td><%= user.getId() %></td>
-                    <td><a href="SubjectServlet?studentId=<%= user.getId() %>"><%= user.getName() %>"/></a></td>
+                    <td><a href="SubjectServlet?studentId=<%= student.getId() %>"><%= student.getName() %></a></td>
                 </tr>
                 <% } %>
 <%--            </c:forEach>--%>

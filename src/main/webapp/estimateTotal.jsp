@@ -6,8 +6,8 @@
     <%@include file="header.jsp" %>
 
     <div>
-        <p><c:out value="${studentId}"/></p>
-        <p><c:out value="${param.subjectId}"/></p>
+        Student id: <p><c:out value="${studentId}"/></p>
+        Subject id: <p><c:out value="${param.subjectId}"/></p>
     </div>
     <div align="center">
         <h2>Estimate total of student's subject </h2>

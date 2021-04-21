@@ -34,11 +34,10 @@ public class SpecificTaskServlet extends HttpServlet {
             }
 
             if (user != null) {
-                if (!user.isTeacher()) {
                     Task task = taskDao.getTaskById(taskId);
 
                     session.setAttribute("task", task);
-                }
+
 
                 RequestDispatcher dispatcher = request.getRequestDispatcher("specific-task.jsp");
                 dispatcher.forward(request, response);

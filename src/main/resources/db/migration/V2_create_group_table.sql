@@ -1,11 +1,11 @@
-create table users
+create table groups
 (
     id       serial       not null
-        constraint users_pkey
+        constraint group_pkey
             primary key,
     name varchar(100) not null,
-    user_id number,
+    teacher_id int,
     CONSTRAINT fk_user
-        FOREIGN KEY(user_id)
+        FOREIGN KEY(teacher_id)
             REFERENCES users(id)
 );

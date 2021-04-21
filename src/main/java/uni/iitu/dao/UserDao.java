@@ -2,7 +2,6 @@ package uni.iitu.dao;
 
 import java.sql.*;
 
-import uni.iitu.entity.Group;
 import uni.iitu.entity.User;
 
 public class UserDao {
