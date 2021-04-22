@@ -41,7 +41,5 @@ public class EstimateTotalServlet extends HttpServlet {
         } catch (SQLException | ClassNotFoundException ex) {
             throw new ServletException(ex);
         }
-
-
     }
 }

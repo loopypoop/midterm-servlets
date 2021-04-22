@@ -1,12 +1,21 @@
 package uni.iitu.entity;
 
-public class User {
+public class User implements java.io.Serializable {
     private Integer id;
     private String password;
     private String name;
     private String email;
     private Integer groupId;
+    private Group group;
     private boolean teacher;
+
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
+    }
 
     public Integer getId() {
         return id;

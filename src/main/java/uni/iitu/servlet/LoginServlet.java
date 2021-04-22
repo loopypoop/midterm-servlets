@@ -28,6 +28,9 @@ public class LoginServlet extends HttpServlet {
             User user = userDao.checkLogin(email, password);
 
             if (user != null) {
+                if (!user.isTeacher()) {
+                    user.setGroup(userDao.getGroupByStudentGroupId(user.getGroupId()));
+                }
                 HttpSession session = request.getSession();
                 session.setAttribute("user", user);
                 session.setMaxInactiveInterval(30*60);

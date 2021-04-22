@@ -1,6 +1,7 @@
 package uni.iitu.servlet;
 
 import uni.iitu.dao.SubjectDao;
+import uni.iitu.dao.UserDao;
 import uni.iitu.entity.Subject_user;
 import uni.iitu.entity.User;
 
@@ -26,6 +27,7 @@ public class SubjectServlet extends HttpServlet {
             throws ServletException, IOException {
 
         SubjectDao subjectDao = new SubjectDao();
+        UserDao userDao = new UserDao();
 
         try {
 
@@ -33,6 +35,7 @@ public class SubjectServlet extends HttpServlet {
             if (request.getParameter("studentId") != null) {
                 studentId = Integer.parseInt(request.getParameter("studentId"));
                 System.out.println(studentId);
+                User student = userDao.getUserById(studentId);
             }
 
             HttpSession session = request.getSession(false);
@@ -53,6 +56,7 @@ public class SubjectServlet extends HttpServlet {
                     request.setAttribute("subjectList", subjectList);
                     session.setAttribute("subjectList", subjectList);
                     session.setAttribute("studentId", studentId);
+                    
                 }
 
                 RequestDispatcher dispatcher = request.getRequestDispatcher("subject-list.jsp");

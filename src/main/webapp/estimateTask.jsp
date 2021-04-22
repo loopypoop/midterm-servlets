@@ -12,8 +12,18 @@
             <input type="hidden" name="taskId" value="<c:out value="${param.taskId}"/>">
             <input type="hidden" name="subjectId" value="<c:out value="${param.subjectId}"/>">
             <label for="grade" class="sr-only">Grade</label>
-            <input name="grade" type="text" id="grade" placeholder="Grade" required="">
-            <button type="submit">Submit</button>
+<%--            <input name="grade" type="text" id="grade" placeholder="Grade" required="">--%>
+
+            <select class="form-select" name="grade" id="grade" aria-label="Grade select" required=""
+            style="width: 120px; height: 30px">
+                <option selected>Grade</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <button class="btn btn-dark" type="submit">Submit</button>
         </form>
     </div>
 

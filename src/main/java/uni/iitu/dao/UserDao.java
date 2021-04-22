@@ -2,6 +2,7 @@ package uni.iitu.dao;
 
 import java.sql.*;
 
+import uni.iitu.entity.Group;
 import uni.iitu.entity.User;
 
 public class UserDao {
@@ -64,6 +65,28 @@ public class UserDao {
         }
 
         return res;
+    }
+
+    public Group getGroupByStudentGroupId(Integer groupId) throws SQLException, ClassNotFoundException {
+        String sql = "SELECT * FROM groups WHERE id = (SELECT group_id FROM users WHERE group_id = ?)";
+        Connection connection = db.getConnection();
+
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setInt(1, groupId);
+
+        ResultSet resultSet = statement.executeQuery();
+        resultSet.next();
+
+        String name = resultSet.getString("name");
+        Integer teacherId = resultSet.getInt("teacher_id");
+
+        Group group = new Group(groupId, name, teacherId);
+
+        resultSet.close();
+        statement.close();
+        connection.close();
+
+        return group;
     }
 
     public User getUserById(Integer id)
